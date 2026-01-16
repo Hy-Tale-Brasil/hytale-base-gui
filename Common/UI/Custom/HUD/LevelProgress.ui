@@ -1,0 +1,31 @@
+Group #LevelProgressHud {
+  Anchor: (Bottom: 36 + 74 + 24 + 6 + 20, Width: 400, Height: 28);
+  LayoutMode: Bottom;
+
+  Label #LevelLabel {
+    Style: (
+      FontSize: 16,
+      TextColor: #ffffff,
+      RenderBold: true,
+      Alignment: Center
+    );
+    Anchor: (Width: 400, Height: 20, Top: -4);
+    Text: "Level 1";
+  }
+
+  Group {
+    LayoutMode: Left;
+    Anchor: (Left: 0, Width: 400);
+
+    Group #ProgressBarContainer {
+      Anchor: (Width: 400, Height: 16);
+      Background: #1a1a1a(0.8);
+      Padding: (Full: 2);
+
+      Group #ProgressBarFill {
+        Anchor: (Left: 0, Height: 12);
+        Background: #4a90e2(1.0);
+      }
+    }
+  }
+}
